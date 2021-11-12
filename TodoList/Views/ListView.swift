@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var tasks:[taskModel]=[
-        taskModel(title:"task 1",isCompleted: true),
-        taskModel(title:"task 2",isCompleted: true),
-        taskModel(title:"task 3",isCompleted: false)
-        
-    ]
+    @EnvironmentObject var listViewModel :ListViewModel
     
     var body: some View {
         List{
-            ForEach(tasks){task in
+            ForEach(listViewModel.tasks){task in
                 ListRowView(task: task)
-            
             }
+            .onDelete(perform: listViewModel.deleteTask)
+            .onMove(perform: listViewModel.moveTask )
         }.listStyle(PlainListStyle())
         .navigationTitle("Tasks 📝")
         .navigationBarItems(
@@ -38,6 +34,7 @@ struct ContentView_Previews: PreviewProvider {
             ListView()
 
         }
+        .environmentObject(ListViewModel())
     }
 }
 

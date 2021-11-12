@@ -14,6 +14,7 @@
 		8D0EF300273E6CB200BA18CC /* ListRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF2FF273E6CB200BA18CC /* ListRowView.swift */; };
 		8D0EF302273E73E900BA18CC /* addTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF301273E73E900BA18CC /* addTaskView.swift */; };
 		8D0EF306273E7C4800BA18CC /* taskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF305273E7C4800BA18CC /* taskModel.swift */; };
+		8D0EF309273EAA2A00BA18CC /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF308273EAA2A00BA18CC /* ListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		8D0EF2FF273E6CB200BA18CC /* ListRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowView.swift; sourceTree = "<group>"; };
 		8D0EF301273E73E900BA18CC /* addTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskView.swift; sourceTree = "<group>"; };
 		8D0EF305273E7C4800BA18CC /* taskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskModel.swift; sourceTree = "<group>"; };
+		8D0EF308273EAA2A00BA18CC /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				8D0EF2F0273E665400BA18CC /* TodoListApp.swift */,
+				8D0EF307273EA9DA00BA18CC /* ViewModels */,
 				8D0EF304273E7C0700BA18CC /* Models */,
 				8D0EF2FE273E667500BA18CC /* Views */,
 				8D0EF2F4273E665600BA18CC /* Assets.xcassets */,
@@ -90,6 +93,14 @@
 				8D0EF305273E7C4800BA18CC /* taskModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		8D0EF307273EA9DA00BA18CC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				8D0EF308273EAA2A00BA18CC /* ListViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +175,7 @@
 			files = (
 				8D0EF306273E7C4800BA18CC /* taskModel.swift in Sources */,
 				8D0EF2F3273E665400BA18CC /* ListView.swift in Sources */,
+				8D0EF309273EAA2A00BA18CC /* ListViewModel.swift in Sources */,
 				8D0EF2F1273E665400BA18CC /* TodoListApp.swift in Sources */,
 				8D0EF300273E6CB200BA18CC /* ListRowView.swift in Sources */,
 				8D0EF302273E73E900BA18CC /* addTaskView.swift in Sources */,
