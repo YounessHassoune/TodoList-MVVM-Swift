@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct addTaskView: View {
+    @Environment(\.presentationMode) var presentationMode
+    @EnvironmentObject var listViewModel :ListViewModel
     @State var TaskField:String = ""
     var body: some View {
         ScrollView{
@@ -18,9 +20,9 @@ struct addTaskView: View {
                     .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color(hue: 0.958, saturation: 0.0, brightness: 0.912)/*@END_MENU_TOKEN@*/)
                     .cornerRadius(10)
                 Button(
-                    action:{
-                    
-                    },label:{
+                    action:
+                        handleSaveClick
+                    ,label:{
                     Text("SAVE")
                             .frame(height:60)
                             .frame(maxWidth:.infinity)
@@ -37,6 +39,10 @@ struct addTaskView: View {
         .navigationTitle("Add Tasks ✏️")
        
     }
+    func handleSaveClick(){
+        listViewModel.addTask(title: TaskField)
+        presentationMode.wrappedValue.dismiss()
+    }
 }
 
 struct addTaskView_Previews: PreviewProvider {
@@ -44,7 +50,7 @@ struct addTaskView_Previews: PreviewProvider {
         NavigationView{
             addTaskView()
         }
-        
+        .environmentObject(ListViewModel())
 
     }
 }

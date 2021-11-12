@@ -30,5 +30,9 @@ class ListViewModel: ObservableObject {
     func moveTask(from: IndexSet,to: Int){
         tasks.move(fromOffsets: from, toOffset: to)
     }
+    func addTask(title:String){
+        let newTask = taskModel(title:title,isCompleted: false)
+        tasks.append(newTask)
+    }
     
 }
