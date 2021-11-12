@@ -8,23 +8,25 @@
 import SwiftUI
 
 struct ListView: View {
-    @State var tasks:[String]=[
-        "task 1",
-        "task 2",
-        "task 3"
+    @State var tasks:[taskModel]=[
+        taskModel(title:"task 1",isCompleted: true),
+        taskModel(title:"task 2",isCompleted: true),
+        taskModel(title:"task 3",isCompleted: false)
+        
     ]
     
     var body: some View {
         List{
-            ForEach(tasks,id:\.self){task in
-                ListRowView(title:task)
+            ForEach(tasks){task in
+                ListRowView(task: task)
+            
             }
         }.listStyle(PlainListStyle())
         .navigationTitle("Tasks 📝")
         .navigationBarItems(
             leading: EditButton(),
             trailing:
-                NavigationLink("Add",destination: Text("Destination"))
+                NavigationLink("Add",destination: addTaskView())
         )
     }
 }

@@ -9,19 +9,27 @@ import SwiftUI
 
 
 struct ListRowView: View {
-    let title:String
+    let task:taskModel
     
     var body: some View {
         HStack{
-            Image("checkmark").resizable().frame(width: 30, height:30)
+            Image(task.isCompleted ? "checkmark" :"disturb").resizable().frame(width: 30, height:30)
             
-            Text(title).font(.headline)
+            Text(task.title).font(.headline)
         }
     }
 }
 
 struct ListRowView_Previews: PreviewProvider {
+    static var task1 = taskModel(title:"task 1",isCompleted:true)
+    static var task2 = taskModel(title:"task 2",isCompleted:false)
+    
     static var previews: some View {
-        ListRowView(title:"this is a todo task")
+        Group{
+            ListRowView(task:task1)
+            ListRowView(task:task2)
+        }
+        .previewLayout(.sizeThatFits)
+      
     }
 }
