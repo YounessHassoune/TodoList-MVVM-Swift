@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct taskModel: Identifiable {
+struct taskModel: Identifiable ,Codable{
     let id:String = UUID().uuidString
     let title:String
     let isCompleted:Bool
