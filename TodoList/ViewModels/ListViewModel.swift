@@ -38,5 +38,11 @@ class ListViewModel: ObservableObject {
     func textChek(text:String)->Bool{
         text.count < 3 ? false:true
     }
+    //update task completion
+    func updateTask(task:taskModel){
+        if let index=tasks.firstIndex(where: { $0.id==task.id }){
+            tasks[index]=task.updateTaskCompletion()
+        }
+    }
     
 }

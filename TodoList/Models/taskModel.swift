@@ -12,4 +12,9 @@ struct taskModel: Identifiable {
     let title:String
     let isCompleted:Bool
     
+    // update the task {setter java be like  }
+    func updateTaskCompletion()-> taskModel{
+        return taskModel(title:title,isCompleted: !isCompleted)
+    }
 }
+
