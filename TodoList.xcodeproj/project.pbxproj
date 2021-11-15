@@ -15,6 +15,7 @@
 		8D0EF302273E73E900BA18CC /* addTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF301273E73E900BA18CC /* addTaskView.swift */; };
 		8D0EF306273E7C4800BA18CC /* taskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF305273E7C4800BA18CC /* taskModel.swift */; };
 		8D0EF309273EAA2A00BA18CC /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D0EF308273EAA2A00BA18CC /* ListViewModel.swift */; };
+		8DEB55F927429AB400376845 /* NoTasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB55F827429AB400376845 /* NoTasksView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		8D0EF301273E73E900BA18CC /* addTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addTaskView.swift; sourceTree = "<group>"; };
 		8D0EF305273E7C4800BA18CC /* taskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = taskModel.swift; sourceTree = "<group>"; };
 		8D0EF308273EAA2A00BA18CC /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
+		8DEB55F827429AB400376845 /* NoTasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoTasksView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +85,7 @@
 				8D0EF2F2273E665400BA18CC /* ListView.swift */,
 				8D0EF2FF273E6CB200BA18CC /* ListRowView.swift */,
 				8D0EF301273E73E900BA18CC /* addTaskView.swift */,
+				8DEB55F827429AB400376845 /* NoTasksView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D0EF306273E7C4800BA18CC /* taskModel.swift in Sources */,
+				8DEB55F927429AB400376845 /* NoTasksView.swift in Sources */,
 				8D0EF2F3273E665400BA18CC /* ListView.swift in Sources */,
 				8D0EF309273EAA2A00BA18CC /* ListViewModel.swift in Sources */,
 				8D0EF2F1273E665400BA18CC /* TodoListApp.swift in Sources */,
