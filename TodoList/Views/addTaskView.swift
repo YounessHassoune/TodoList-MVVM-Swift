@@ -7,10 +7,14 @@
 
 import SwiftUI
 
+
 struct addTaskView: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var listViewModel :ListViewModel
     @State var TaskField:String = ""
+    @State var alertContent:String=""
+    @State var showAlert:Bool=false
+    
     var body: some View {
         ScrollView{
             VStack{
@@ -31,18 +35,32 @@ struct addTaskView: View {
                             .background(.green)
                             .cornerRadius(10)
                     })
+               
                             
             }
             .padding(12)
+        
            
         }
         .navigationTitle("Add Tasks ✏️")
-       
+        .alert(isPresented:$showAlert , content:setAlert)
+
+    
     }
     func handleSaveClick(){
+        if(listViewModel.textChek(text:TaskField )){
         listViewModel.addTask(title: TaskField)
-        presentationMode.wrappedValue.dismiss()
+            presentationMode.wrappedValue.dismiss()
+            
+        }else{
+            alertContent="Your task must be atlest 3 charcters 🥲"
+            showAlert.toggle()
+        }
     }
+    func setAlert()->Alert{
+        return Alert(title:Text(alertContent))
+    }
+    
 }
 
 struct addTaskView_Previews: PreviewProvider {

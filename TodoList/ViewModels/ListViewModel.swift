@@ -34,5 +34,9 @@ class ListViewModel: ObservableObject {
         let newTask = taskModel(title:title,isCompleted: false)
         tasks.append(newTask)
     }
+    //check text is empty before add
+    func textChek(text:String)->Bool{
+        text.count < 3 ? false:true
+    }
     
 }
