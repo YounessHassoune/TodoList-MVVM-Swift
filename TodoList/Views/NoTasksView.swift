@@ -10,8 +10,8 @@ import SwiftUI
 struct NoTasksView: View {
     @State var animate:Bool = false
     var body: some View {
-        ScrollView {
-            VStack(spacing:10){
+        ScrollView{
+            VStack(spacing: 10){
                 Text("There are no tasks!")
                     .font(.title)
                     .fontWeight(.semibold)

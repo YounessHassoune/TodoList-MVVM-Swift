@@ -11,7 +11,7 @@ struct ListView: View {
     @EnvironmentObject var listViewModel :ListViewModel
     
     var body: some View {
-        ZStack{
+        ZStack {
             if listViewModel.tasks.isEmpty{
                 NoTasksView()
                     .transition(AnyTransition.opacity.animation(.easeIn))
